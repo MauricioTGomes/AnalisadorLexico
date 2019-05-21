@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+  <div class="card-header">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <a class="navbar-brand"><h3>Analisador Léxico</h3></a>
+    </nav>
+  </div>
+  <br>
+  <main class="content" style="margin-top:0px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+    <form onsubmit="return false;" style="width: 70%;">
+      <div class="block">
+        <div class="block-title">
+          <h5 class="text-center">Adicionar palavra</h5>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-10">
+              <input id="word" type="text" class="form-control" value="">
+            </div>
+            <div class="col-sm-2">
+              <button class="btn btn-success" title="Adicionar" onclick="adicionaNovaPalavra();">Adicionar <i class="glyphicon glyphicon-ok-circle"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <button id="buttonClear" class="btn btn-danger" onclick="limpaCampos();">Apagar palavras</button>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">
+        <h5 class="text-center">Dicionário de palavras:</h5>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="list-group">
+              <tbody  id="listWords"></tbody>
+            </table>
+          </div>
+        </div>        
+      </div>
+    </div>
+
+
+    <div class="block">
+      <div class="block-title">
+        <h5 class="text-center">Validar palavra:</h5>
+      </div>
+      <div class="form-group">
+        <input type="text" id="validate" class="form-control" autocomplete="off"/>
+      </div>
+    </div>
+  </form>
+
+  <table style="width: 90%;" id="table-automaton"></table>
+
+</main>
+
+
+<footer class="card-footer">
+        <span>Turma 2015 - Mauricio Treviso Gomes</span>
+</footer>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/validador.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>
